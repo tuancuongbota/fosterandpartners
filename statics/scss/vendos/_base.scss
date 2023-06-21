@@ -1,0 +1,394 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600&display=swap";
+
+body {
+  transition: opacity .4s ease-in;
+}
+
+:root {
+  --bs-blue:#0d6efd;
+  --bs-indigo:#6610f2;
+  --bs-purple:#6f42c1;
+  --bs-pink:#d63384;
+  --bs-red:#dc3545;
+  --bs-orange:#fd7e14;
+  --bs-yellow:#ffc107;
+  --bs-green:#198754;
+  --bs-teal:#20c997;
+  --bs-cyan:#0dcaf0;
+  --bs-white:#fff;
+  --bs-gray:#6c757d;
+  --bs-gray-dark:#343a40;
+  --bs-gray-100:#f8f9fa;
+  --bs-gray-200:#e9ecef;
+  --bs-gray-300:#dee2e6;
+  --bs-gray-400:#ced4da;
+  --bs-gray-500:#adb5bd;
+  --bs-gray-600:#6c757d;
+  --bs-gray-700:#495057;
+  --bs-gray-800:#343a40;
+  --bs-gray-900:#212529;
+  --bs-primary:#0d6efd;
+  --bs-secondary:#6c757d;
+  --bs-success:#198754;
+  --bs-info:#0dcaf0;
+  --bs-warning:#ffc107;
+  --bs-danger:#dc3545;
+  --bs-light:#f8f9fa;
+  --bs-dark:#212529;
+  --bs-pure-black:#1a1a1a;
+  --bs-black:#333;
+  --bs-grey:#ebebeb;
+  --bs-grey-light:#f5f5f5;
+  --bs-grey-lighter:#fafafa;
+  --bs-yellow:#ffff01;
+  --bs-pink:#fee5e3;
+  --bs-orange:#ee7f00;
+  --bs-grey-base:#4d4d4d;
+  --bs-grey-dark:#cccccc;
+  --bs-grey-darker:#999999;
+  --bs-white:#fff;
+  --bs-primary-rgb:13, 110, 253;
+  --bs-secondary-rgb:108, 117, 125;
+  --bs-success-rgb:25, 135, 84;
+  --bs-info-rgb:13, 202, 240;
+  --bs-warning-rgb:255, 193, 7;
+  --bs-danger-rgb:220, 53, 69;
+  --bs-light-rgb:248, 249, 250;
+  --bs-dark-rgb:33, 37, 41;
+  --bs-pure-black-rgb:26, 26, 26;
+  --bs-grey-rgb:235, 235, 235;
+  --bs-grey-light-rgb:245, 245, 245;
+  --bs-grey-lighter-rgb:250, 250, 250;
+  --bs-yellow-rgb:255, 255, 1;
+  --bs-pink-rgb:254, 229, 227;
+  --bs-orange-rgb:238, 127, 0;
+  --bs-grey-base-rgb:77, 77, 77;
+  --bs-grey-dark-rgb:204, 204, 204;
+  --bs-grey-darker-rgb:153, 153, 153;
+  --bs-white-rgb:255, 255, 255;
+  --bs-black-rgb:51, 51, 51;
+  --bs-body-color-rgb:33, 37, 41;
+  --bs-body-bg-rgb:255, 255, 255;
+  --bs-font-sans-serif:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family:open sans, sans-serif;
+  --bs-body-font-size:1rem;
+  --bs-body-font-weight:400;
+  --bs-body-line-height:1.5;
+  --bs-body-color:#212529;
+  --bs-body-bg:#fff;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  --fa-font-light:normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-regular:normal 400 1em/1 "Font Awesome 6 Pro";
+  --fa-font-solid:normal 900 1em/1 "Font Awesome 6 Pro";
+  --fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url(../fonts/fa-light-300.woff2) format("woff2"), url(../fonts/fa-light-300.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../fonts/fa-regular-400.woff2) format("woff2"), url(../fonts/fa-regular-400.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url(../fonts/fa-solid-900.woff2) format("woff2"), url(../fonts/fa-solid-900.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../fonts/fa-brands-400.woff2) format("woff2"), url(../fonts/fa-brands-400.ttf) format("truetype");
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*:focus:not(.focus-visible) {
+   outline: none;
+}
+* {
+  box-sizing: border-box;
+
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(51, 51, 51, 0);
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.min-vh-100 {
+  min-height: 100vh !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+.truncate-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: initial;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    visibility: visible;
+    text-align: start;
+  }
+  
+  .truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: initial;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    visibility: visible;
+    text-align: start;
+  }
+  
+  .truncate-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: initial;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    visibility: visible;
+    text-align: start;
+  }
+  
+  .truncate-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: initial;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    visibility: visible;
+    text-align: start;
+  }
+  
+  .truncate-5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: initial;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    visibility: visible;
+    text-align: start;
+  }
+  
+  .spacer-1 {
+    height: 1rem;
+    width: 100%;
+    margin: 40px 0;
+  }
+  
+  @media (min-width: 576px) {
+    .spacer-1 {
+      margin: 80px 0;
+    }
+  }
+  
+  .spacer-2 {
+    height: 2rem;
+    width: 100%;
+    margin: 40px 0;
+  }
+  
+  @media (min-width: 576px) {
+    .spacer-2 {
+      margin: 80px 0;
+    }
+  }
+  
+  .spacer-3 {
+    height: 3rem;
+    width: 100%;
+    margin: 40px 0;
+  }
+  
+  @media (min-width: 576px) {
+    .spacer-3 {
+      margin: 80px 0;
+    }
+  }
+  
+  .spacer-4 {
+    height: 4rem;
+    width: 100%;
+    margin: 40px 0;
+  }
+  
+  @media (min-width: 576px) {
+    .spacer-4 {
+      margin: 80px 0;
+    }
+  }
+  
+  .spacer-5 {
+    height: 5rem;
+    width: 100%;
+    margin: 40px 0;
+  }
+  
+  @media (min-width: 576px) {
+    .spacer-5 {
+      margin: 80px 0;
+    }
+  }
+  
+  .fa {
+    color: #1a1a1a;
+  }
+  
+  .fa-brands {
+    color: #1a1a1a;
+    color: #4d4d4d;
+  }
+  
+  :host {
+    position: relative;
+  }
+  
+  body {
+    transition: opacity .4s ease-in;
+  
+    &.dark-theme {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+  }
+  
+  .btn-group {
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .full-bleed {
+    box-shadow: 0 0 0 100vmax #f5f5f5;
+    clip-path: inset(0 -100vmax);
+    padding: 1.875rem 0;
+    margin-top: -1px;
+  }
+  
+  .text-block {
+    display: block;
+    font-weight: 300;
+    line-height: 28px;
+    margin: 0 auto;
+    min-width: 40%;
+  }
+  
+  @media (min-width: 1024px) {
+    .text-block {
+      max-width: 620px;
+    }
+  }
+  
+  .quote {
+    padding: 2rem;
+  
+    .quote-text {
+      font-weight: 300;
+      margin-bottom: 20px;
+      letter-spacing: .5px;
+  
+      &:before {
+        content: open-quote;
+      }
+  
+      &:after {
+        content: close-quote;
+      }
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1439.98px) {
+    .quote .quote-text {
+      font-size: 15px;
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1439.98px) {
+    .quote .quotee {
+      font-size: 14px;
+    }
+  }
+  
+  .overlay {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+  
