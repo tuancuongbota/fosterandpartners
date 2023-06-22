@@ -1,0 +1,47 @@
+.header{
+    .navbar {
+        .container_header{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+        }
+    }
+    
+    .navbar-brand{
+        z-index: 9999;
+    }
+    .navbar-controls {
+        color: initial;
+        z-index: 9999;
+        position: relative;
+        left: 0.5rem;
+        display: flex;
+        align-items: center;
+        .icon{
+            position: relative;
+            padding: 1.25rem;
+            min-width: 60px;
+            min-height: 60px;
+            max-width: 60px;
+            max-height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .navbar{
+        height: 75px;
+        width: 100%;
+        z-index: 9999;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        transition: top .3s linear;
+        &.homepage:not(.nav-open) {
+            background-color: #00000059;
+            transition: background-color .6s,top .3s linear;
+            z-index: 9999;
+        }
+    }
+}

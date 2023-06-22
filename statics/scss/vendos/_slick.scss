@@ -99,16 +99,14 @@
     display: none;
   }
   
-  @charset "UTF-8";
-  
   .slick-loading .slick-list {
-    background: #fff url(ajax-loader.0b80f665935ef7de.gif) center center no-repeat;
+    background: #fff url(../imgs/ajax-loader.gif) center center no-repeat;
   }
   
   @font-face {
     font-family: slick;
-    src: url(slick.25572f22d77029da.eot);
-    src: url(slick.25572f22d77029da.eot?#iefix) format("embedded-opentype"), url(slick.653a4cbba6e1a2b3.woff) format("woff"), url(slick.6aa1ee46202fac6e.ttf) format("truetype"), url(slick.f895cfdf693e6229.svg#slick) format("svg");
+    src: url(../fonts/slick.eot);
+    src: url(../fonts/slick.eot?#iefix) format("embedded-opentype"), url(../fonts/slick.woff) format("woff"), url(../fonts/slick.ttf) format("truetype"), url(../fonts/slick.svg#slick) format("svg");
     font-weight: 400;
     font-style: normal;
   }
