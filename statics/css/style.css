@@ -11790,7 +11790,7 @@ hr { background-color: #ebebeb !important; opacity: 1 !important; }
 #onetrust-consent-sdk #onetrust-button-group button, #onetrust-consent-sdk .ot-pc-footer button { font-size: 13px !important; padding: 0.5rem 1rem !important; }
 
 .slick-slideshow { overflow: hidden; }
-.slick-slideshow .item { width: 100vw; height: calc(100 * 4.15px); }
+.slick-slideshow .item { width: 100vw; height: 100vh; }
 .slick-slideshow .item .overlay-div { position: absolute; width: 100%; height: 100%; top: 0; z-index: 1; background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, transparent), to(black)); background: linear-gradient(to bottom, transparent 75%, black 100%); }
 .slick-slideshow .item .overlay-div .title-container { position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; bottom: 4.5rem; z-index: 99; }
 @media (min-width: 1024px) { .slick-slideshow .item .overlay-div .title-container { text-align: left; bottom: 2rem; } }
