@@ -407,4 +407,25 @@ body {
     bottom: 0;
     z-index: 9999;
   }
+  @media (min-width: 768px) {
+    .grid .g-col-md-8 {
+      grid-column: auto/span 8;
+    }
+    .grid .g-col-md-4 {
+      grid-column: auto/span 4;
+  }
+  }
   
+  .grid .g-col-12 {
+    grid-column: auto/span 12;
+    grid-column: auto/span 12;
+  }
+  
+  @media (min-width: 768px) {
+    .grid .g-col-md-8 {
+      grid-column: auto/span 8;
+    }
+  }
+  img{
+    max-width: 100%;
+  }

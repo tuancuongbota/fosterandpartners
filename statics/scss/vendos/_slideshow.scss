@@ -102,3 +102,63 @@
       stroke-dashoffset: 0;
     }
   }
+  .arrow {
+    background: rgba(255,255,255,.25);
+    width: 40px;
+    height: 80px;
+    border-radius: 100px;
+    position: absolute;
+    top: calc(50% - 50px);
+    z-index: 1;
+    right: 1.5rem;
+    cursor: pointer;
+    @media (min-width: 1024px){
+        right: 3.5rem;
+    }
+    @media (min-width: 768px){
+        right: 2rem;
+    }
+    &:before,&:after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 4px;
+    }
+    &:before {
+        width: 2px;
+        height: 35px;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+        background: white;
+    }
+    &:after {
+        width: 8px;
+        height: 8px;
+        border-bottom: 2px solid;
+        border-left: 2px solid;
+        top: 50px;
+        left: 17px;
+        transform: rotate(-45deg);
+        border-color: #fff;
+    }
+    &:hover {
+        background: rgba(255,255,255,.4);
+        transition: all .3s ease-in-out;
+    }
+}
+.news-home-item {
+    overflow: hidden;
+    position: relative;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;position: relative
+}
+@media (min-width: 1024px){
+    .news-home-item {
+            height: 335px;
+    }
+}

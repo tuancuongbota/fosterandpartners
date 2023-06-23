@@ -22,4 +22,21 @@ $(document).ready(function(){
               currentVideo = video.get(0);
           }
       });
+    // scroll menu
+      const nav = document.querySelector('.navbar.homepage');
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        const currentScrollPos = window.pageYOffset;
+        if (prevScrollpos < currentScrollPos && currentScrollPos > 75) {
+            nav.style.top = '-75px';
+        } else {
+            nav.style.top = '0';
+        }
+        prevScrollpos = currentScrollPos;
+    }
+    // scroll menu
+      $(".scrolltop").click(function(event){
+        $('html, body').animate({ scrollTop: 0 }, 500);
+       });
+      AOS.init();
 });
