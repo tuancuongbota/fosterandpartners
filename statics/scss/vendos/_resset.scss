@@ -426,16 +426,182 @@ iframe {
   }
   
   .offcanvas {
+    position: fixed;
+    bottom: 0;
+    z-index: 1045;
+    display: none;
+    flex-direction: column;
+    max-width: 100%;
+    visibility: hidden;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform .3s ease-in-out;
     background-color: transparent !important;
+    top: 0;
+    right: 0;
+    width: 100%;
+    border-left: 1px solid rgba(0,0,0,.2);
+    transform: translate(100%);
+    &.show{
+      display: flex;
+      visibility: visible;
+      transform: none;
+    }
   
     .offcanvas-body {
       display: flex;
       overflow: hidden !important;
       padding: 0 !important;
-  
+      flex-grow: 1;
+      .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        row-gap: 0.5rem;
+        color: #ccc;
+        font-weight: 600;
+        margin-bottom: 25px;
+      
+        .category {
+          cursor: pointer;
+      
+          .text-orange {
+            color: rgb(238, 127, 0);
+          }
+        }
+      }
+      
+      .search_container.main-nav-search input {
+        position: relative;
+        height: 50px;
+        border-radius: 0;
+        font-size: 1.5rem;
+        font-family: Open Sans,"Font Awesome 6 Pro";
+        min-width: 200px;
+        padding: 0.4375rem 1.25rem;
+        border: 0;
+        background: #f5f5f5;
+        width: 100%;
+        outline: none;
+      }
+      
+      .results {
+        color: #333;
+        margin-top: 25px;
+        font-weight: 700;
+        font-size: .9375rem;
+      
+        h4 {
+          color: rgb(153, 153, 153);
+          font-weight: 600;
+        }
+      
+        .result-item {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-bottom: 0.25rem;
+      
+          h3 {
+            line-height: 1.5;
+          }
+        }
+      }
+      .mb_menu_list_bottm {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 5rem;
+      
+        .btn-group {
+          position: relative;
+          display: inline-flex;
+          vertical-align: middle;
+      
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 400 !important;
+            border-radius: 25px;
+            font-size: .875rem;
+            color: #1a1a1a;
+            white-space: nowrap;
+            height: 32px;
+            width: 32px;
+            background-color: #ebebeb;
+            border-color: #ebebeb;
+            text-decoration: none;
+          }
+        }
+      }
+      
+      .links a {
+        text-decoration: none;
+        display: flex;
+      
+        &.text-grey-dark {
+          color: rgb(204, 204, 204);
+        }
+      }
+      
+      .mb_menu_list{
+        display: none;
+        &.show{
+          display: block;
+          .mb_menu_list_top{
+            display: flex;
+          }
+        }
+        .internal-links .nav-item {
+          &.active{
+            a{
+              color: #333;
+            }
+          }
+          i {
+            color: #999;
+            margin-right: 0.5rem;
+            font-size: .85rem;
+          }
+          a {
+            align-items: center;
+          }
+        }
+        h4 {
+          color: rgb(204, 204, 204);
+        }
+      
+        &.show {
+          margin-top: 6.25rem;
+        }
+      
+        .nav-item {
+          margin: 0;
+      
+          a {
+            color: #ccc;
+            display: inline-block;
+            text-decoration: none;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+            padding: 0.5rem 1rem;
+            padding-bottom: 0;
+            padding-left: 0;
+      
+            &.active {
+              color: #333;
+            }
+          }
+        }
+      }
       .menu-left-side {
         width: 50vw;
         height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
       }
   
       .offcanvas-content {
