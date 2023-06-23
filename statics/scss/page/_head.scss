@@ -28,6 +28,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            &:hover{
+                color: #1a1a1a;
+                background-color: #fff;
+                border-radius: 100%;
+            }
         }
     }
     .navbar{
@@ -38,10 +43,15 @@
         position: fixed;
         top: 0;
         transition: top .3s linear;
-        &.homepage:not(.nav-open) {
-            background-color: #00000059;
-            transition: background-color .6s,top .3s linear;
-            z-index: 9999;
+        &.homepage{
+            &:not(.nav-open) {
+                background-color: #00000059;
+                transition: background-color .6s,top .3s linear;
+                z-index: 9999;
+                &:hover {
+                    background-color: #1a1a1a;
+                }
+            }
         }
     }
 }

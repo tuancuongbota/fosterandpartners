@@ -34,7 +34,14 @@ $(document).ready(function(){
         }
         prevScrollpos = currentScrollPos;
     }
-    // scroll menu
+    // Scroll xuống  "home-news"
+    var arrowLink = document.querySelector('a.arrow');
+    arrowLink.addEventListener('click', function(event) {
+    event.preventDefault(); 
+    var homeNews = document.querySelector('.home-news');
+    homeNews.scrollIntoView({ behavior: 'smooth' });
+    });
+    // scroll up
       $(".scrolltop").click(function(event){
         $('html, body').animate({ scrollTop: 0 }, 500);
        });
